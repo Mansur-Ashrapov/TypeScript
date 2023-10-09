@@ -1,10 +1,10 @@
 function task6(num: number): number {
-    if (num < 10) 
-      return num;
-    var s = 0;
-    while(num) {
-        s += num % 10;
-        num = ~~(num / 10); // ~~ округление в меньшую сторону
-    }
-    return task6(s);
+  while (num >= 10) {
+      num = (+num.toString().split('').reduce((res, cur) => ((+res) + (+cur)).toString()));
+  }
+  return num;
 }
+
+/*
+    Почему-то если оставить (+res) + (+cur) без toString(), редактор говорит что нельзя так делать, но все работает 
+*/
