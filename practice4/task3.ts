@@ -25,6 +25,6 @@ abstract class Human implements CanSwim, CanRun {
     abstract run();
 }
 
-abstract class Crypton implements CanFly {
+abstract class Cryptonian implements CanFly {
     abstract fly();
 }

@@ -53,10 +53,10 @@ abstract class OrderItem {
 
     compare(order: OrderItem): number {
         if (order.getCost() > this.getCost()) {
-            return 1;
+            return -1;
         }
         else if (order.getCost() < this.getCost()) {
-            return -1;
+            return 1;
         }
         return 0;
     }
